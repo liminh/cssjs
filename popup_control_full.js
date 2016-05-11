@@ -1,13 +1,12 @@
 //please contact me banhtrangmuoingonnhat@gmail.com
 //website http://banhtranmuoitayninh.com 
-
 (function($) {
-    $.fn.linhnguyen = function(options) {        
+    $.fn.quyc3 = function(options) {        
         var defaults = {  
 	    	animation: 'fadeAndPop', //fade, fadeAndPop, none
 		    animationspeed: 300, //how fast animtions are
 		    closeonbackgroundclick: true, //if you click background will modal close?
-		    dismissmodalclass: 'close-linhnguyen-modal' //the class of a button or element that will close an open modal
+		    dismissmodalclass: 'close-quyc3-modal' //the class of a button or element that will close an open modal
     	}; 
 
         var options = $.extend({}, defaults, options); 
@@ -17,12 +16,12 @@
         		topMeasure  = parseInt(modal.css('top')),
 				topOffset = modal.height() + topMeasure,
           		locked = false,
-				modalBG = $('.linhnguyen-modal-bg');
+				modalBG = $('.quyc3-modal-bg');
 
 			if(modalBG.length == 0) {
-				modalBG = $('<div class="linhnguyen-modal-bg" />').insertAfter(modal);
+				modalBG = $('<div class="quyc3-modal-bg" />').insertAfter(modal);
 			}		    
-			modal.bind('linhnguyen:open', function () {
+			modal.bind('quyc3:open', function () {
 			  modalBG.unbind('click.modalEvent');
 				$('.' + options.dismissmodalclass).unbind('click.modalEvent');
 				if(!locked) {
@@ -48,10 +47,10 @@
 						unlockModal()				
 					}
 				}
-				modal.unbind('linhnguyen:open');
+				modal.unbind('quyc3:open');
 			}); 	
 
-			modal.bind('linhnguyen:close', function () {
+			modal.bind('quyc3:close', function () {
 			  if(!locked) {
 					lockModal();
 					if(options.animation == "fadeAndPop") {
@@ -78,24 +77,24 @@
 						modalBG.css({'display' : 'none'});	
 					}		
 				}
-				modal.unbind('linhnguyen:close');
+				modal.unbind('quyc3:close');
 			});     
    	
-    	modal.trigger('linhnguyen:open')
+    	modal.trigger('quyc3:open')
 			
 			//Close Modal Listeners
 			var closeButton = $('.' + options.dismissmodalclass).bind('click.modalEvent', function () {
-			  modal.trigger('linhnguyen:close')
+			  modal.trigger('quyc3:close')
 			});
 			
 			if(options.closeonbackgroundclick) {
 				modalBG.css({"cursor":"pointer"})
 				modalBG.bind('click.modalEvent', function () {
-				  modal.trigger('linhnguyen:close')
+				  modal.trigger('quyc3:close')
 				});
 			}
 			$('body').keyup(function(e) {
-        		if(e.which===27){ modal.trigger('linhnguyen:close'); } // 27 is the keycode for the Escape key
+        		if(e.which===27){ modal.trigger('quyc3:close'); } // 27 is the keycode for the Escape key
 			});
 			
 			function unlockModal() { 
