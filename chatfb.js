@@ -1,15 +1,14 @@
-jQuery.noConflict();
-jQuery( document ).ready(function( $ ) {
+jQuery( document ).ready(function(jQuery  ) {
 // Code that uses jQuery's $ can follow here.
- $('.online-support').hide();
-  $('.support-icon-right h3').click(function(e){
+ jQuery ('.online-support').hide();
+  jQuery ('.support-icon-right h3').click(function(e){
     e.stopPropagation();
-    $('.online-support').slideToggle();
+    jQuery ('.online-support').slideToggle();
   });
-  $('.online-support').click(function(e){
+  jQuery ('.online-support').click(function(e){
     e.stopPropagation();
   });
-  $(document).click(function(){
+  jQuery (document).click(function(){
     $('.online-support').slideUp();
   });
 });
