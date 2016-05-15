@@ -1,5 +1,5 @@
 <script>
-var str ='<div class="menu-right" style='display:none'>';
+var str ='<div class="menu-right" style="display:none">';
 str = '<a href="http://banhtranmuoitayninh.com/muoi-tieu" title="MUỐI Tiêu TÂY NINH">MUỐI Tiêu TÂY NINH</a>';
     str += '<a href="http://banhtranmuoitayninh.com/muoi-ot" target="_blank" title=" MUỐI ỚT TÂY NINH "> MUỐI ỚT TÂY NINH</a>';
 	str +='<a href="http://banhtranmuoitayninh.com/muoi-tay-ninh" target="_blank" title=" MUỐI TÔM TÂY NINH "> MUỐI TÔM TÂY NINH</a>';
